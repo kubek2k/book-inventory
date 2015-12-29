@@ -25,6 +25,14 @@ module.exports = function(books) {
       .catch(handleError);
     },
 
+    copiesLeft: function(req, res) {
+      books.find(req.params.isbn)
+        .then(function(book) {
+          res.send('<div>'+ book.count +' </div>');
+        })
+        .catch(handleError);
+    },
+
     stockUp: function(req, res) {
       console.log("Stocking up " + req.body.isbn + " count = " + req.body.count);
       books.stockUp(req.body.isbn, req.body.count)

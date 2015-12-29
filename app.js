@@ -12,6 +12,7 @@ module.exports = function(books) {
   app.post("/stock", resources.stockUp);
   app.get("/all", resources.findAll);
   app.get("/book/:isbn", resources.find);
+  app.get("/copiesLeft/:isbn", resources.copiesLeft);
 
   app.use(resources.notFound);
   app.use(resources.serverError);
