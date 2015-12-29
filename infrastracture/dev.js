@@ -6,6 +6,7 @@ configurator({ name: 'another-book-inventory-dev',
       region: 'us',
       maintenance: false,
       stack: 'cedar-14',
+      config_vars: { MONGOLAB_URI: 'mongodb://heroku_qckxfzx2:d6ghbp1uu43mcpm4kadulvg64g@ds037185.mongolab.com:37185/heroku_qckxfzx2' },
       collaborators: 
        [ 'plan3-labs@herokumanager.com',
          'michal.kucharzyk@schibsted.pl',
