@@ -1,0 +1,25 @@
+{
+  "name": "book-inventory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha",
+    "test:xunit": "npm run test -- --reporter xunit",
+    "lint": "jshint --exclude=node_modules/** **.js"
+  },
+  "author": "Jakub Janczak <kubek2k@gmail.com> (http://github.com/kubek2k)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.14.2",
+    "express": "4.13.3",
+    "mongodb": "^2.1.2",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "jshint": "^2.8.0",
+    "mocha": "2.3.4",
+    "supertest": "1.1.0"
+  }
+}
