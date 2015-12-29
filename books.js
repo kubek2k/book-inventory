@@ -1,7 +1,7 @@
 
 const MongoClient = require('mongodb').MongoClient
 // Connection URL
-const url = 'mongodb://localhost:27017/books';
+const url = process.env.MONGOLAB_URI
 // Use connect method to connect to the Server
 
 const collection = MongoClient.connect(url).then(function(db) {
