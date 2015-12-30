@@ -13,5 +13,5 @@ configurator({ name: 'another-book-inventory-dev',
          'wojciech.kabala@schibsted.pl',
          'jakub@plan3.se' ],
       formation: [ { process: 'web', quantity: 1, size: 'Free' } ],
-      log_drains: [],
+      log_drains: ['syslog://data.logentries.com:13636'],
       domains: [ 'another-book-inventory-dev.herokuapp.com' ] })
