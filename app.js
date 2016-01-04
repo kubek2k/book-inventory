@@ -8,6 +8,13 @@ module.exports = function(books) {
 
   app.use(resources.logReq);
   app.use(body_parser.json());
+  app.use(function(req, res, next) {
+    const startTime = Date.now();
+    res.on('finish', function() {
+      console.log("Request taken " + (Date.now() - startTime) + " milliseconds");
+    });
+    next();
+  });
 
   app.post("/stock", resources.stockUp);
   app.get("/all", resources.findAll);
@@ -16,6 +23,7 @@ module.exports = function(books) {
 
   app.use(resources.notFound);
   app.use(resources.serverError);
+
 
   return app;
 }

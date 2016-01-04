@@ -45,6 +45,7 @@ module.exports = function(books) {
 
     notFound: function(req, res, next) {
       res.status(404).send("sorry!");
+      next();
     },
 
     serverError: function(err, req, res, next) {
